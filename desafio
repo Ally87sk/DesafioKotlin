@@ -1,0 +1,10 @@
+data class ConteudoEducacional(val nome: String, val duracao: Int)
+
+data class Formacao(val nome: String, val nivel: String, val conteudos: List<ConteudoEducacional>) {
+    val inscritos = mutableListOf<Aluno>()
+    fun matricular(aluno: Aluno) {
+        inscritos.add(aluno)
+    }
+}
+
+data class Aluno(val nome: String)
